@@ -1,0 +1,116 @@
+.invest-form {
+  background: var(--dark-card);
+  padding: 90px 0;
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.invest-form__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.invest-form__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.invest-form__sub {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+}
+
+/* Form */
+.invest-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--dark-border);
+  border-radius: 6px;
+  padding: 13px 16px;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  color: var(--text-white);
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  resize: vertical;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-dim); }
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(201,168,76,0.5);
+  background: rgba(201,168,76,0.04);
+}
+
+.invest-form__submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+.invest-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.form-feedback {
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-feedback--success {
+  background: rgba(47,138,79,0.15);
+  border: 1px solid rgba(47,138,79,0.3);
+  color: #5ab870;
+}
+.form-feedback--error {
+  background: rgba(200,60,60,0.12);
+  border: 1px solid rgba(200,60,60,0.3);
+  color: #e07070;
+}
+
+@media (max-width: 960px) {
+  .invest-form__inner { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 600px) {
+  .invest-form__inner { padding: 0 20px; }
+  .form-row { grid-template-columns: 1fr; }
+}
