@@ -32,11 +32,10 @@
   flex-shrink: 0;
 }
 
-.navbar__logo-text {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #fff;
+.navbar__logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navbar__links {

@@ -18,8 +18,8 @@ export default function App() {
         <WhyEBDA />
         <BuiltForPurpose />
         <DevelopmentStatus />
-        <LatestPhotos />
         <ExperienceVision />
+        <LatestPhotos />
         <InfiniteCatalog />
         <InvestForm />
       </main>

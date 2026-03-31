@@ -27,12 +27,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer__brand">
           <div className="footer__logo">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="15" fill="#1a3a25" stroke="#2f8a4f" strokeWidth="1.5"/>
-              <path d="M16 8 C10 10 8 16 12 19 C14 20.5 15 22 16 24 C17 22 18 20.5 20 19 C24 16 22 10 16 8Z" fill="#2f8a4f"/>
-              <path d="M16 12 C13 13.5 12 17 14.5 18.5 C15 18.8 15.5 19.3 16 20 C16.5 19.3 17 18.8 17.5 18.5 C20 17 19 13.5 16 12Z" fill="#5ab870"/>
-            </svg>
-            <span>ebdacity</span>
+            <img src="/ebda city logo.jpeg" alt="EBDA City" className="footer__logo-img" />
           </div>
           <p className="footer__tagline">
             A multi-faceted urban ecosystem designed to bridge high-end lifestyle with industrial

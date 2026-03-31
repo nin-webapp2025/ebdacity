@@ -25,6 +25,12 @@
   margin-bottom: 14px;
 }
 
+.footer__logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
 .footer__tagline {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.45);

@@ -23,12 +23,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         {/* Logo */}
         <a href="#" className="navbar__logo">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="15" fill="#1a3a25" stroke="#2f8a4f" strokeWidth="1.5"/>
-            <path d="M16 8 C10 10 8 16 12 19 C14 20.5 15 22 16 24 C17 22 18 20.5 20 19 C24 16 22 10 16 8Z" fill="#2f8a4f"/>
-            <path d="M16 12 C13 13.5 12 17 14.5 18.5 C15 18.8 15.5 19.3 16 20 C16.5 19.3 17 18.8 17.5 18.5 C20 17 19 13.5 16 12Z" fill="#5ab870"/>
-          </svg>
-          <span className="navbar__logo-text">ebdacity</span>
+          <img src="/ebda city logo.jpeg" alt="EBDA City" className="navbar__logo-img" />
         </a>
 
         {/* Desktop Links */}

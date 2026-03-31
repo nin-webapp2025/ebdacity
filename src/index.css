@@ -36,16 +36,7 @@ img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: var(--font); }
 
 .section-badge {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  border-radius: 3px;
-  padding: 3px 10px;
-  margin-bottom: 12px;
+  display: none;
 }
 
 .gold { color: var(--gold); }

@@ -13,7 +13,7 @@ export default function ExperienceVision() {
           {!playing ? (
             <div className="experience__thumbnail" onClick={() => setPlaying(true)}>
               <img
-                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80"
+                src="https://img.youtube.com/vi/l-QJrI9l-Lw/maxresdefault.jpg"
                 alt="EBDA City preview"
               />
               <div className="experience__overlay">
@@ -28,7 +28,7 @@ export default function ExperienceVision() {
           ) : (
             <iframe
               className="experience__iframe"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              src="https://www.youtube.com/embed/l-QJrI9l-Lw?autoplay=1"
               title="EBDA City Vision"
               allow="autoplay; fullscreen"
               allowFullScreen
