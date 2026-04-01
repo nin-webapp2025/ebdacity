@@ -6,7 +6,7 @@
   overflow: hidden;
   background:
     linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
-    url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80') center/cover no-repeat;
+    url('/ebdacity-hero-bg.jpeg') center/cover no-repeat;
 }
 
 .hero__overlay {
@@ -70,10 +70,23 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    background:
+      linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
+      url('/ebdacity-hero-bg.jpeg') center top / cover no-repeat;
+  }
   .hero__content {
     padding: 120px 24px 80px;
     margin-left: 0;
     max-width: 100%;
   }
   .hero__actions { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background:
+      linear-gradient(to bottom, rgba(8,13,20,0.6) 0%, rgba(8,13,20,0.75) 60%, rgba(8,13,20,1) 100%),
+      url('/ebdacity-hero-bg.jpeg') 60% top / cover no-repeat;
+  }
 }
