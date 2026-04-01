@@ -91,6 +91,9 @@ export default function WhyEBDA() {
               <li>Limited appeal to younger urban demographics</li>
             </ul>
             <p style={{ marginTop: '0.75rem' }}>
+              Additionally, destinations such as Ikogosi are relatively remote and expensive for frequent recreational use, limiting accessibility for the majority of residents and students.
+            </p>
+            <p style={{ marginTop: '0.75rem' }}>
               This creates a strong opportunity for a centralized, modern recreational destination
               within Ado-Ekiti itself.
             </p>
