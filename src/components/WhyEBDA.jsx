@@ -1,26 +1,26 @@
 import './WhyEBDA.css'
 
 const features = [
-  '4-Star Hotel',
-  'Central Mall',
-  'Entertainment District',
-  'Cinema',
-  'Casino',
-  'Tech Hub',
-  'Arcade',
-  'Night Club',
-  'Fine Dining Restaurant',
-  'Multiple Eateries',
-  '2,000sqm Outdoor Sport Bar & Lounge',
-  'Water Park',
-  'Private Meeting Rooms',
-  'Conference Center',
-  'Event Marquee',
-  'Love Garden',
-  'Petting Zoo',
-  'SME Factories',
-  'Warehousing',
-  'Retail',
+  { emoji: '🏨', label: '4-Star Hotel' },
+  { emoji: '🏬', label: 'Central Mall' },
+  { emoji: '🎭', label: 'Entertainment District' },
+  { emoji: '🎬', label: 'Cinema' },
+  { emoji: '🎰', label: 'Casino' },
+  { emoji: '💻', label: 'Tech Hub' },
+  { emoji: '🕹️', label: 'Arcade' },
+  { emoji: '🎶', label: 'Night Club' },
+  { emoji: '🍽️', label: 'Fine Dining Restaurant' },
+  { emoji: '🍜', label: 'Multiple Eateries' },
+  { emoji: '🍺', label: 'Sport Bar & Lounge' },
+  { emoji: '🌊', label: 'Water Park' },
+  { emoji: '🤝', label: 'Private Meeting Rooms' },
+  { emoji: '🎤', label: 'Conference Center' },
+  { emoji: '🎪', label: 'Event Marquee' },
+  { emoji: '🌹', label: 'Love Garden' },
+  { emoji: '🦒', label: 'Petting Zoo' },
+  { emoji: '🏭', label: 'SME Factories' },
+  { emoji: '📦', label: 'Warehousing' },
+  { emoji: '🛍️', label: 'Retail' },
 ]
 
 export default function WhyEBDA() {
@@ -103,14 +103,14 @@ export default function WhyEBDA() {
         {/* Right – Project Features */}
         <div className="why-ebda__features">
           <h4 className="features__title">Project Features</h4>
-          <ul className="features__list">
+          <div className="features__grid">
             {features.map(f => (
-              <li key={f} className="features__item">
-                <span className="features__check">✔</span>
-                {f}
-              </li>
+              <div key={f.label} className="features__grid-item">
+                <span className="features__emoji">{f.emoji}</span>
+                <span className="features__label">{f.label}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>
