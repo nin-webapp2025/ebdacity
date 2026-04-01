@@ -9,10 +9,6 @@ export default function Hero() {
           The Future of <span className="gold">Living</span><br />
           and <span className="gold">Industry.</span>
         </h1>
-        <p className="hero__sub">
-          A multi-faceted urban ecosystem designed to bridge high-end lifestyle with
-          industrial innovation. EBDA City is the architect's vision for 2026 and beyond.
-        </p>
         <div className="hero__actions">
           <a href="#invest" className="btn-primary">Explore Investment</a>
           <a href="#why-ebda" className="btn-outline">Discover the Vision</a>
