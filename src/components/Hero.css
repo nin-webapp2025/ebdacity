@@ -4,9 +4,13 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background:
+  background-image:
     linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
-    url('/ebdacity-hero-bg.jpeg') center/cover no-repeat;
+    url('/ebdacity-hero-bg.jpeg');
+  background-size: cover, cover;
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, scroll;
 }
 
 .hero__overlay {
@@ -71,9 +75,12 @@
 
 @media (max-width: 768px) {
   .hero {
-    background:
+    background-image:
       linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
-      url('/ebdacity-hero-bg.jpeg') center top / cover no-repeat;
+      url('/ebdacity-hero-bg.jpeg');
+    background-size: cover, cover;
+    background-position: center center, center top;
+    background-repeat: no-repeat, no-repeat;
   }
   .hero__content {
     padding: 120px 24px 80px;
@@ -85,8 +92,11 @@
 
 @media (max-width: 480px) {
   .hero {
-    background:
+    background-image:
       linear-gradient(to bottom, rgba(8,13,20,0.6) 0%, rgba(8,13,20,0.75) 60%, rgba(8,13,20,1) 100%),
-      url('/ebdacity-hero-bg.jpeg') 60% top / cover no-repeat;
+      url('/ebdacity-hero-bg.jpeg');
+    background-size: cover, cover;
+    background-position: center center, 60% top;
+    background-repeat: no-repeat, no-repeat;
   }
 }
