@@ -120,6 +120,18 @@
   left: 0;
   color: var(--gold);
 }
+.why-ebda__advantage p {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+.why-ebda__advantage h5 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.5);
+}
 
 /* Housing */
 .why-ebda__housing {
