@@ -1,35 +1,29 @@
-import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 import './InvestForm.css'
 
-const SERVICE_ID  = 'YOUR_EMAILJS_SERVICE_ID'
-const TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID'
-const PUBLIC_KEY  = 'YOUR_EMAILJS_PUBLIC_KEY'
+const WA_NUMBER = '2349162699999'
 
 export default function InvestForm() {
-  const formRef = useRef(null)
   const [form, setForm] = useState({
-    fullName: '',
-    refName: '',
-    amount: '',
+    name: '',
+    email: '',
+    phone: '',
     message: '',
   })
-  const [status, setStatus] = useState(null) // null | 'sending' | 'success' | 'error'
 
   const handleChange = e => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault()
-    setStatus('sending')
-    try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-      setStatus('success')
-      setForm({ fullName: '', refName: '', amount: '', message: '' })
-    } catch {
-      setStatus('error')
-    }
+    const text =
+      `Hello, I'm interested in EBDA City.%0A%0A` +
+      `Name: ${encodeURIComponent(form.name)}%0A` +
+      `Email: ${encodeURIComponent(form.email)}%0A` +
+      `Phone: ${encodeURIComponent(form.phone)}%0A` +
+      `Message: ${encodeURIComponent(form.message)}`
+    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -44,41 +38,41 @@ export default function InvestForm() {
           </p>
         </div>
 
-        <form ref={formRef} className="invest-form__form" onSubmit={handleSubmit} noValidate>
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="fullName">FULL NAME</label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                placeholder="Company Name"
-                value={form.fullName}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="refName">REFERENCE NAME</label>
-              <input
-                id="refName"
-                name="refName"
-                type="text"
-                placeholder="Company Name"
-                value={form.refName}
-                onChange={handleChange}
-              />
-            </div>
+        <form className="invest-form__form" onSubmit={handleSubmit} noValidate>
+          <div className="form-group">
+            <label htmlFor="name">FULL NAME</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your full name"
+              value={form.name}
+              onChange={handleChange}
+              required
+            />
           </div>
 
           <div className="form-group">
-            <label htmlFor="amount">AMOUNT</label>
+            <label htmlFor="email">EMAIL ADDRESS</label>
             <input
-              id="amount"
-              name="amount"
-              type="text"
-              placeholder="$ Amount"
-              value={form.amount}
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Your email address"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="phone">PHONE NUMBER</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="Your phone number"
+              value={form.phone}
               onChange={handleChange}
               required
             />
@@ -96,24 +90,9 @@ export default function InvestForm() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="btn-primary invest-form__submit"
-            disabled={status === 'sending'}
-          >
-            {status === 'sending' ? 'Sending…' : 'Submit Application'}
+          <button type="submit" className="btn-primary invest-form__submit">
+            Send via WhatsApp
           </button>
-
-          {status === 'success' && (
-            <p className="form-feedback form-feedback--success">
-              Thank you! We'll be in touch shortly.
-            </p>
-          )}
-          {status === 'error' && (
-            <p className="form-feedback form-feedback--error">
-              Something went wrong. Please try again or email us directly.
-            </p>
-          )}
         </form>
       </div>
     </section>

@@ -6,6 +6,7 @@ import LatestPhotos from './components/LatestPhotos'
 import ExperienceVision from './components/ExperienceVision'
 import InvestForm from './components/InvestForm'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <InvestForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }
