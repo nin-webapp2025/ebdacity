@@ -11,7 +11,7 @@ const features = [
   { emoji: '🎶', label: 'Night Club' },
   { emoji: '🍽️', label: 'Fine Dining Restaurant' },
   { emoji: '🍜', label: 'Multiple Eateries' },
-  { emoji: '🍺', label: 'Sport Bar & Lounge' },
+  { emoji: '🍺', label: '2,000sqm Outdoor Sport Bar & Lounge' },
   { emoji: '🌊', label: 'Water Park' },
   { emoji: '🤝', label: 'Private Meeting Rooms' },
   { emoji: '🎤', label: 'Conference Center' },
@@ -39,7 +39,7 @@ export default function WhyEBDA() {
               <p className="stat__label">Estimated residents</p>
             </div>
             <div className="stat">
-              <p className="stat__value stat__value--orange">-3.15%</p>
+              <p className="stat__value stat__value--orange">~3.15%</p>
               <p className="stat__label">Annual population growth</p>
             </div>
             <div className="stat">
@@ -62,7 +62,7 @@ export default function WhyEBDA() {
           <p className="why-ebda__body">
             Despite these strong fundamentals, modern recreational and entertainment infrastructure
             remains extremely limited, creating a clear gap between consumer demand and available
-            leisure offerings.
+            leisure offerings:
           </p>
 
           {/* Regional Connectivity Advantage */}
@@ -71,17 +71,26 @@ export default function WhyEBDA() {
             <p>
               EBDA City is located within close proximity to the Ekiti State Agro-Allied International
               Cargo Airport, a major infrastructure project developed by the Ekiti State Government to
-              improve regional connectivity and stimulate tourism, trade, and investment. The proximity
-              of EBDA City to the airport positions the Recreational Centre to serve as a primary
-              hospitality, leisure, and entertainment destination for incoming visitors, business
+              improve regional connectivity and stimulate tourism, trade, and investment.
+            </p>
+            <p style={{ marginTop: '0.75rem' }}>
+              The proximity of EBDA City to the airport positions the Recreational Centre to serve as a
+              primary hospitality, leisure, and entertainment destination for incoming visitors, business
               travelers, and tourists.
             </p>
             <p style={{ marginTop: '0.75rem' }}>
-              Existing recreational activities in Ekiti State largely revolve around: Fajuyi Memorial
-              Park, Arinta Waterfalls, Olosunta Hills, Udiroko cultural festival, and Ikogosi Warm
-              Springs Resort. While culturally and historically significant, these attractions primarily
-              focus on heritage tourism and nature experiences rather than modern leisure and
-              entertainment.
+              Existing recreational activities in Ekiti State largely revolve around:
+            </p>
+            <ul>
+              <li>Fajuyi Memorial Park</li>
+              <li>Arinta Waterfalls</li>
+              <li>Olosunta Hills</li>
+              <li>Udiroko cultural festival</li>
+              <li>Ikogosi Warm Springs Resort</li>
+            </ul>
+            <p style={{ marginTop: '0.75rem' }}>
+              While culturally and historically significant, these attractions primarily focus on
+              heritage tourism and nature experiences rather than modern leisure and entertainment.
             </p>
             <h5 style={{ marginTop: '0.75rem', marginBottom: '0.4rem' }}>Limitations of existing offerings:</h5>
             <ul>
