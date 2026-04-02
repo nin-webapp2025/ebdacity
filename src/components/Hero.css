@@ -4,19 +4,29 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image:
-    linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
-    url('/ebdacity-hero-bg.jpeg');
-  background-size: cover, cover;
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: scroll, scroll;
+  background-color: #080d14;
 }
 
+/* Background image — own layer, avoids iOS Safari multi-layer bg bug */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/ebdacity-hero-bg.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Gradient overlay — own layer on top of image */
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(8,13,20,0.6) 0%, transparent 60%, rgba(0,50,25,0.15) 100%);
+  background:
+    linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
+    linear-gradient(135deg, rgba(8,13,20,0.4) 0%, transparent 60%, rgba(0,50,25,0.15) 100%);
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -74,13 +84,8 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    background-image:
-      linear-gradient(to bottom, rgba(8,13,20,0.55) 0%, rgba(8,13,20,0.7) 60%, rgba(8,13,20,1) 100%),
-      url('/ebdacity-hero-bg.jpeg');
-    background-size: cover, cover;
-    background-position: center center, center top;
-    background-repeat: no-repeat, no-repeat;
+  .hero::before {
+    background-position: center top;
   }
   .hero__content {
     padding: 120px 24px 80px;
@@ -91,12 +96,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero {
-    background-image:
-      linear-gradient(to bottom, rgba(8,13,20,0.6) 0%, rgba(8,13,20,0.75) 60%, rgba(8,13,20,1) 100%),
-      url('/ebdacity-hero-bg.jpeg');
-    background-size: cover, cover;
-    background-position: center center, 60% top;
-    background-repeat: no-repeat, no-repeat;
+  .hero::before {
+    background-position: 60% top;
   }
 }
