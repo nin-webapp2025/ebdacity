@@ -1,26 +1,54 @@
 import './WhyEBDA.css'
 
-const features = [
-  { emoji: '🏨', label: '4-Star Hotel' },
-  { emoji: '🏬', label: 'Central Mall' },
-  { emoji: '🎭', label: 'Entertainment District' },
-  { emoji: '🎬', label: 'Cinema' },
-  { emoji: '🎰', label: 'Casino' },
-  { emoji: '💻', label: 'Tech Hub' },
-  { emoji: '🕹️', label: 'Arcade' },
-  { emoji: '🎶', label: 'Night Club' },
-  { emoji: '🍽️', label: 'Fine Dining Restaurant' },
-  { emoji: '🍜', label: 'Multiple Eateries' },
-  { emoji: '🍺', label: '2,000sqm Outdoor Sport Bar & Lounge' },
-  { emoji: '🌊', label: 'Water Park' },
-  { emoji: '🤝', label: 'Private Meeting Rooms' },
-  { emoji: '🎤', label: 'Conference Center' },
-  { emoji: '🎪', label: 'Event Marquee' },
-  { emoji: '🌹', label: 'Love Garden' },
-  { emoji: '🦒', label: 'Petting Zoo' },
-  { emoji: '🏭', label: 'SME Factories' },
-  { emoji: '📦', label: 'Warehousing' },
-  { emoji: '🛍️', label: 'Retail' },
+const categories = [
+  {
+    name: 'Hospitality',
+    color: '#c9a84c',
+    bg: 'rgba(201,168,76,0.08)',
+    items: [
+      { emoji: '🏨', label: '4-Star Hotel' },
+      { emoji: '🏬', label: 'Central Mall' },
+      { emoji: '🍽️', label: 'Fine Dining Restaurant' },
+      { emoji: '🍜', label: 'Multiple Eateries' },
+      { emoji: '🌊', label: 'Water Park' },
+      { emoji: '🌹', label: 'Love Garden' },
+      { emoji: '🦒', label: 'Petting Zoo' },
+    ],
+  },
+  {
+    name: 'Entertainment',
+    color: '#2f8a4f',
+    bg: 'rgba(47,138,79,0.08)',
+    items: [
+      { emoji: '🎭', label: 'Entertainment District' },
+      { emoji: '🎬', label: 'Cinema' },
+      { emoji: '🎰', label: 'Casino' },
+      { emoji: '🕹️', label: 'Arcade' },
+      { emoji: '🎶', label: 'Night Club' },
+      { emoji: '🍺', label: '2,000sqm Sport Bar & Lounge' },
+      { emoji: '🎪', label: 'Event Marquee' },
+    ],
+  },
+  {
+    name: 'Business',
+    color: '#4a9eff',
+    bg: 'rgba(74,158,255,0.08)',
+    items: [
+      { emoji: '💻', label: 'Tech Hub' },
+      { emoji: '🤝', label: 'Private Meeting Rooms' },
+      { emoji: '🎤', label: 'Conference Center' },
+    ],
+  },
+  {
+    name: 'Industrial',
+    color: '#e07b39',
+    bg: 'rgba(224,123,57,0.08)',
+    items: [
+      { emoji: '🏭', label: 'SME Factories' },
+      { emoji: '📦', label: 'Warehousing' },
+      { emoji: '🛍️', label: 'Retail' },
+    ],
+  },
 ]
 
 export default function WhyEBDA() {
@@ -112,11 +140,22 @@ export default function WhyEBDA() {
         {/* Right – Project Features */}
         <div className="why-ebda__features">
           <h4 className="features__title">Project Features</h4>
-          <div className="features__grid">
-            {features.map(f => (
-              <div key={f.label} className="features__grid-item">
-                <span className="features__emoji">{f.emoji}</span>
-                <span className="features__label">{f.label}</span>
+          <div className="features__categories">
+            {categories.map(cat => (
+              <div key={cat.name} className="feature-category" style={{ '--cat-color': cat.color, '--cat-bg': cat.bg }}>
+                <div className="feature-category__header">
+                  <div className="feature-category__band" />
+                  <span className="feature-category__name" style={{ color: cat.color }}>{cat.name}</span>
+                  <span className="feature-category__count" style={{ background: cat.bg, color: cat.color }}>{cat.items.length}</span>
+                </div>
+                <div className="feature-category__items">
+                  {cat.items.map(item => (
+                    <div key={item.label} className="feature-item">
+                      <span className="feature-item__emoji">{item.emoji}</span>
+                      <span className="feature-item__label">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
