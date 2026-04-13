@@ -32,10 +32,7 @@ const phases = [
     statusClass: 'upcoming',
     progress: 14,
     progressColor: '#c9a84c',
-    details: [
-      { label: 'Residential', pct: 18 },
-      { label: 'Commercial', pct: 10 },
-    ],
+    details: [],
   },
 ]
 
@@ -78,7 +75,7 @@ export default function DevelopmentStatus() {
               <p className="phase-card__pct">{p.progress}%</p>
 
               {/* Sub bars */}
-              <div className="phase-card__details">
+              {p.details.length > 0 && <div className="phase-card__details">
                 {p.details.map(d => (
                   <div key={d.label} className="detail-row">
                     <span className="detail-label">{d.label}</span>
@@ -91,7 +88,7 @@ export default function DevelopmentStatus() {
                     <span className="detail-pct">{d.pct}%</span>
                   </div>
                 ))}
-              </div>
+              </div>}
             </div>
           ))}
         </div>
