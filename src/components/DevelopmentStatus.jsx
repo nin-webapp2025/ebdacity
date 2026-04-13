@@ -30,7 +30,7 @@ const phases = [
     title: 'Vertical Construction',
     status: 'UPCOMING',
     statusClass: 'upcoming',
-    progress: 14,
+    progress: 0,
     progressColor: '#c9a84c',
     details: [],
   },
