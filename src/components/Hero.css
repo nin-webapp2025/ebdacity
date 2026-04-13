@@ -84,11 +84,15 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    align-items: flex-end;
+  }
   .hero::before {
     background-position: center top;
   }
   .hero__content {
-    padding: 120px 24px 80px;
+    padding: 80px 24px 48px;
     margin-left: 0;
     max-width: 100%;
   }
